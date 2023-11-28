@@ -30,9 +30,13 @@ function App() {
     <div className="App">
       {data ? data.countries.map((country: Country) => {
         return (
-          <p key={country.code}>
-            {country.name + '/' + country.native}           
-          </p>
+          <ul key={country.code}>
+            <li>
+              {country.name + ' / ' + country.native}
+              <br />
+              {country.capital} 
+            </li>        
+          </ul>
         )
       }) : null}
     </div>
